@@ -1,0 +1,241 @@
+/* ===========================
+   THEME VARIABLES
+=========================== */
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+  --border-color: #ddd;
+}
+
+.darkmode {
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+  --border-color: #2a2e43;
+}
+
+/* Theme switch button */
+#theme-switch {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 300px;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+/* Icon colors */
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+/* Show sun in light mode */
+#theme-switch svg:first-child {
+  display: block;
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+
+/* Show moon in dark mode */
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--base-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav {
+  position: relative;
+  left: 440px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.profile .icon {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--secondary-text);
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: var(--base-variant);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s;
+  color: var(--text-color);
+}
+
+.btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  background: var(--base-color);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background: var(--base-color); /* ✅ change here */
+  color: var(--text-color);
+}
+
+.upload-box {
+  border: 2px dashed var(--border-color);
+  padding: 30px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  background: var(--base-color);
+}
+
+/* ===========================
+   QUIZ QUESTIONS
+=========================== */
+.quiz-container {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+.question {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--secondary-text);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Answer feedback */
+.correct {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+.incorrect {
+  background-color: #dc3545 !important;
+  color: white;
+}
+
+/* ===========================
+   RESULT DISPLAY
+=========================== */
+.result {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 24px;
+}

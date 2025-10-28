@@ -1,0 +1,188 @@
+/* ===========================
+   THEME VARIABLES
+=========================== */
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+
+.darkmode {
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+
+/* ===========================
+   BASE STYLES
+=========================== */
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: var(--base-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav {
+  position: relative;
+  left: 440px;
+}
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Theme switch button */
+#theme-switch {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+/* Icon colors */
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+/* Show sun in light mode */
+#theme-switch svg:first-child {
+  display: block;
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+
+/* Show moon in dark mode */
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px); /* full height minus header */
+  padding: 20px;
+}
+
+/* ===========================
+   QUIZ APP CARD
+=========================== */
+.app {
+  background-color: var(--base-variant);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* ===========================
+   QUIZ QUESTIONS
+=========================== */
+.question {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--secondary-text);
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.next-btn {
+  margin-top: 10px;
+  display: none;
+}
+
+/* Answer feedback */
+.correct {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+.incorrect {
+  background-color: #dc3545 !important;
+  color: white;
+}
+
+/* ===========================
+   RESULT DISPLAY
+=========================== */
+.result {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 24px;
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Quiz",
+  "description": "Schema for generating multiple-choice quiz questions with answers",
+  "type": "object",
+  "properties": {
+    "quiz_title": {
+      "type": "string",
+      "description": "Title of the quiz (e.g., 'Python Basics Quiz')"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject or category of the quiz (e.g., 'Python Programming')"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Difficulty level of the quiz"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of quiz questions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique question ID"
+          },
+          "question_text": {
+            "type": "string",
+            "description": "The quiz question"
+          },
+          "options": {
+            "type": "array",
+            "description": "List of possible answer options",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 6
+          },
+          "correct_answer": {
+            "type": "string",
+            "description": "The correct answer (must match one of the options)"
+          },
+          "explanation": {
+            "type": "string",
+            "description": "Explanation of the correct answer"
+          }
+        },
+        "required": ["id", "question_text", "options", "correct_answer"]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["quiz_title", "subject", "difficulty", "questions"]
+}
