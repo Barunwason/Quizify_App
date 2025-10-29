@@ -11,7 +11,9 @@ const topicInputForm = document.getElementById("topicInput1");
 const option2Container = document.getElementById("card2");
 const option1Container = document.getElementById("card1");
 const toggleBtn = document.getElementById("theme-switch");
-const app = document.getElementsByClassName("app");
+// Removed unused: const app = document.getElementsByClassName("app");
+const uploadForm = document.getElementById("uploadForm");
+const uploadResult = document.getElementById("uploadResult");
 
 // Load saved preference
 if (localStorage.getItem("theme") === "dark") {
@@ -74,12 +76,41 @@ function submit_topic() {
   });
 }
 
+// Handle PDF upload to generate quiz from PDF
+if (uploadForm) {
+  uploadForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(uploadForm);
+    uploadResult.textContent = "Uploading and generating quiz...";
+    try {
+      const res = await fetch("/upload-pdf", { method: "POST", body: formData });
+      if (!res.ok) throw new Error("Upload failed");
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+
+      // Fetch the generated questions and show quiz
+      const quizRes = await fetch("/static/questions.json?" + Date.now());
+      quizData = await quizRes.json();
+
+      option1Container.style.display = "none";
+      option2Container.style.display = "none";
+      questionContainer.style.display = "block";
+      currentQuestionIndex = 0;
+      score = 0;
+      showQuestion();
+      uploadResult.textContent = "Quiz generated from PDF.";
+    } catch (err) {
+      console.error(err);
+      uploadResult.textContent = "Error: " + err.message;
+    }
+  });
+}
+
 function showQuestion() {
   resetState();
   let currentQuestion = quizData.questions[currentQuestionIndex];
-  questionElement.innerText = `${currentQuestionIndex + 1}. ${
-    currentQuestion.question_text
-  }`;
+  questionElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question_text
+    }`;
 
   currentQuestion.options.forEach((option) => {
     const button = document.createElement("button");
