@@ -1,7 +1,8 @@
 {
-  "difficulty": "medium",
+  "difficulty": "hard",
   "questions": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "correct_answer": "Question Generation",
       "explanation": "LangChain is used for AI-based quiz generation, which involves question generation.",
@@ -128,125 +129,65 @@
 =======
       "correct_answer": "To provide insights into the reasons for low confidence among individuals and offer practical tips and tricks to help individuals build and maintain confidence",
       "explanation": "The presentation on 'Confidence' aims to provide valuable insights and practical tips to enhance self-confidence.",
+=======
+>>>>>>> fcdbbad (subjective question functionality added)
       "id": 1,
-      "options": [
-        "To provide insights into the reasons for low confidence among individuals and offer practical tips and tricks to help individuals build and maintain confidence",
-        "To discuss the importance of community service",
-        "To introduce the concept of personality development",
-        "To provide an overview of the BCA program"
-      ],
-      "question_text": "What is the primary objective of the presentation on 'Confidence'?"
+      "ideal_answer": "The key components of a transformer LLM are the encoder, decoder, and attention mechanism. The encoder takes in a sequence of tokens and outputs a sequence of vectors, which are then used by the decoder to generate a sequence of output tokens. The attention mechanism allows the model to focus on specific parts of the input sequence when generating each output token.",
+      "question_text": "What are the key components of a transformer LLM and how do they interact?"
     },
     {
-      "correct_answer": "Enlightened Kumud Trust",
-      "explanation": "The students visited the Enlightened Kumud Trust NGO to interact with underprivileged children.",
       "id": 2,
-      "options": [
-        "Enlightened Kumud Trust",
-        "Vivekananda Institute of Professional Studies",
-        "Vivekananda School of Information Technology",
-        "Barun Wason Foundation"
-      ],
-      "question_text": "What is the name of the NGO visited by the students?"
+      "ideal_answer": "The transformer LLM handles long-range dependencies using self-attention mechanisms, which allow the model to attend to all positions in the input sequence simultaneously and weigh their importance. This is particularly useful for tasks that require understanding the relationships between distant tokens in a sequence.",
+      "question_text": "How does the transformer LLM handle long-range dependencies in input sequences?"
     },
     {
-      "correct_answer": "It reinforces the belief in the importance of empathy, compassion, and supporting those in need",
-      "explanation": "The visit to the NGO reinforced the students' belief in the importance of community service and supporting those in need.",
       "id": 3,
-      "options": [
-        "It helps to build confidence",
-        "It provides an opportunity to learn new skills",
-        "It reinforces the belief in the importance of empathy, compassion, and supporting those in need",
-        "It is a requirement for the BCA program"
-      ],
-      "question_text": "What is the importance of community service?"
+      "ideal_answer": "The transformer LLM has several advantages over traditional recurrent neural networks, including parallelization, reduced computational complexity, and improved handling of long-range dependencies. This makes the transformer LLM particularly well-suited for tasks that require processing long sequences of data.",
+      "question_text": "What are some of the advantages of using a transformer LLM over traditional recurrent neural networks?"
     },
     {
-      "correct_answer": "Barun Wason",
-      "explanation": "The assignment was submitted by Barun Wason.",
       "id": 4,
-      "options": [
-        "Barun Wason",
-        "Dhruv Parashar",
-        "Karthik Nair",
-        "Saurabh Sharma"
-      ],
-      "question_text": "What is the name of the student who submitted the assignment?"
+      "ideal_answer": "The transformer LLM learns to represent the context and semantics of input sequences through a combination of token embeddings, position embeddings, and self-attention mechanisms. The token embeddings capture the semantic meaning of individual tokens, while the position embeddings capture the order and context of the tokens in the sequence.",
+      "question_text": "How does the transformer LLM learn to represent the context and semantics of input sequences?"
     },
     {
-      "correct_answer": "Confidence-Building Skills",
-      "explanation": "The group organized an event on the topic of 'Confidence-Building Skills'.",
       "id": 5,
-      "options": [
-        "Confidence-Building Skills",
-        "Community Service",
-        "Personality Development",
-        "Leadership Skills"
-      ],
-      "question_text": "What is the topic of the event organized by the group?"
+      "ideal_answer": "The attention mechanism plays a crucial role in the transformer LLM, allowing the model to focus on specific parts of the input sequence when generating each output token. This is particularly useful for tasks that require understanding the relationships between different parts of a sequence.",
+      "question_text": "What role does the attention mechanism play in the transformer LLM?"
     },
     {
-      "correct_answer": "Poster",
-      "explanation": "Barun Wason was responsible for creating the poster for the event.",
       "id": 6,
-      "options": [
-        "Presentation",
-        "Poster",
-        "Content of presentation",
-        "Feedback form"
-      ],
-      "question_text": "What is the role of Barun Wason in the group?"
+      "ideal_answer": "The transformer LLM handles out-of-vocabulary tokens using a combination of subword tokenization and position embeddings. Subword tokenization allows the model to break down rare or unseen words into subwords, which can be represented using a combination of token embeddings and position embeddings.",
+      "question_text": "How does the transformer LLM handle out-of-vocabulary tokens?"
     },
     {
-      "correct_answer": "Ms. Kanta Malik",
-      "explanation": "Ms. Kanta Malik was the faculty coordinator for the community service event.",
       "id": 7,
-      "options": [
-        "Ms. Kanta Malik",
-        "Ms. Vivekananda",
-        "Ms. Kumud",
-        "Ms. Barun"
-      ],
-      "question_text": "What is the name of the faculty coordinator for the community service event?"
+      "ideal_answer": "Some of the challenges of training a transformer LLM include the need for large amounts of computational resources, the risk of overfitting, and the difficulty of optimizing the model's hyperparameters. Additionally, the transformer LLM requires a large amount of high-quality training data to learn effective representations of input sequences.",
+      "question_text": "What are some of the challenges of training a transformer LLM?"
     },
     {
-      "correct_answer": "To interact with underprivileged children and engage them in enjoyable activities",
-      "explanation": "The objective of the community service event was to interact with underprivileged children and engage them in enjoyable activities.",
       "id": 8,
-      "options": [
-        "To interact with underprivileged children and engage them in enjoyable activities",
-        "To provide support to the NGO",
-        "To learn new skills",
-        "To build confidence"
-      ],
-      "question_text": "What is the objective of the community service event?"
+      "ideal_answer": "The transformer LLM generates output sequences using a combination of the decoder and the output linear layer. The decoder takes in the output of the encoder and generates a sequence of output tokens, one token at a time, using a combination of self-attention mechanisms and feed-forward neural networks.",
+      "question_text": "How does the transformer LLM generate output sequences?"
     },
     {
-      "correct_answer": "All of the above",
-      "explanation": "The community service event provided valuable insights into the lives of underprivileged children and highlighted the significance of supporting them through interactive activities and programs.",
       "id": 9,
-      "options": [
-        "The importance of empathy and compassion",
-        "The significance of supporting underprivileged children",
-        "The value of community service",
-        "All of the above"
-      ],
-      "question_text": "What is the learning outcome of the community service event?"
+      "ideal_answer": "The transformer LLM has a wide range of applications, including machine translation, text summarization, question answering, and text generation. The model's ability to learn effective representations of input sequences makes it particularly well-suited for tasks that require understanding the context and semantics of natural language.",
+      "question_text": "What are some of the applications of the transformer LLM?"
     },
     {
-      "correct_answer": "Vivekananda School of Information Technology",
-      "explanation": "The students are pursuing their BCA degree at the Vivekananda School of Information Technology.",
       "id": 10,
-      "options": [
-        "Vivekananda School of Information Technology",
-        "Vivekananda Institute of Professional Studies",
-        "Enlightened Kumud Trust",
-        "Barun Wason School of Information Technology"
-      ],
-      "question_text": "What is the name of the school where the students are pursuing their BCA degree?"
+      "ideal_answer": "The transformer LLM evaluates its own performance using a combination of metrics, including perplexity, accuracy, and F1 score. Perplexity measures the model's ability to predict the next token in a sequence, while accuracy and F1 score measure the model's ability to generate correct output sequences.",
+      "question_text": "How does the transformer LLM evaluate its own performance?"
     }
   ],
+<<<<<<< HEAD
   "quiz_title": "Personality Development and Community Service Quiz",
   "subject": "Personality Development and Community Service"
 >>>>>>> bd56628 (Update quiz questions and add report PDFs)
+=======
+  "quiz_title": "Transformer LLM Quiz",
+  "subject": "Transformer LLM",
+  "mode": "subjective"
+>>>>>>> fcdbbad (subjective question functionality added)
 }

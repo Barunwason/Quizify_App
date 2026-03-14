@@ -3,3 +3,4 @@ python-dotenv==1.2.1
 langchain-core==0.3.75
 langchain-groq==0.3.7
 pdfplumber==0.11.7
+langgraph

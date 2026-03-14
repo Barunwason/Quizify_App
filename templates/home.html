@@ -59,6 +59,13 @@
         <h2>Enter a Topic</h2>
         <input type="text" id="topicInput" name="topic"
           placeholder="Enter a topic (e.g. Python Basics, World War II)" />
+
+        <label for="questionTypeSelect" class="select-label">Question type</label>
+        <select id="questionTypeSelect" name="question_type">
+          <option value="mcq" selected>MCQ</option>
+          <option value="subjective">Subjective</option>
+        </select>
+
         <button type="submit" id="generateBtn" class="btn">
           Create Quiz
         </button>
@@ -70,6 +77,13 @@
       <h2>Upload PDF</h2>
       <form id="uploadForm" action="/upload-pdf" method="POST" enctype="multipart/form-data">
         <input type="file" name="pdf" accept="application/pdf,.pdf" required />
+
+        <label for="questionTypeSelectPdf" class="select-label">Question type</label>
+        <select id="questionTypeSelectPdf" name="question_type">
+          <option value="mcq" selected>MCQ</option>
+          <option value="subjective">Subjective</option>
+        </select>
+
         <button class="btn" type="submit">Upload PDF and Generate Quiz</button>
       </form>
       <div id="uploadResult" style="margin-top:8px;"></div>

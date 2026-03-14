@@ -1,0 +1,45 @@
+{
+  "title": "SubjectiveQuiz",
+  "description": "Schema for generating subjective quiz questions with ideal answers",
+  "type": "object",
+  "properties": {
+    "quiz_title": {
+      "type": "string",
+      "description": "Title of the quiz (e.g., 'Python Conceptual Quiz')"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject or category of the quiz (e.g., 'Python Programming')"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Difficulty level of the quiz"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of subjective quiz questions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique question ID"
+          },
+          "question_text": {
+            "type": "string",
+            "description": "The subjective quiz question"
+          },
+          "ideal_answer": {
+            "type": "string",
+            "description": "A concise ideal answer used for evaluating user responses"
+          }
+        },
+        "required": ["id", "question_text", "ideal_answer"]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["quiz_title", "subject", "difficulty", "questions"]
+}
+

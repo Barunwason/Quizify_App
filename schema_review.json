@@ -1,0 +1,36 @@
+{
+  "title": "SubjectiveReview",
+  "type": "object",
+  "properties": {
+    "overall_score": {
+      "type": "number",
+      "description": "Overall score out of 10 for all answers combined"
+    },
+    "overall_feedback": {
+      "type": "string",
+      "description": "Short summary of overall performance and suggestions"
+    },
+    "per_question": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Question ID this feedback refers to"
+          },
+          "rating": {
+            "type": "integer",
+            "description": "Rating from 1 (poor) to 5 (excellent)"
+          },
+          "feedback": {
+            "type": "string",
+            "description": "Brief feedback on this specific answer"
+          }
+        },
+        "required": ["id", "rating", "feedback"]
+      }
+    }
+  },
+  "required": ["overall_score", "overall_feedback", "per_question"]
+}
