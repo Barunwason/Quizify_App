@@ -2,6 +2,7 @@
   "difficulty": "medium",
   "questions": [
     {
+<<<<<<< HEAD
       "correct_answer": "Question Generation",
       "explanation": "LangChain is used for AI-based quiz generation, which involves question generation.",
       "id": 1,
@@ -124,4 +125,128 @@
   ],
   "quiz_title": "AI/ML and Software Engineering Quiz",
   "subject": "AI/ML and Software Engineering"
+=======
+      "correct_answer": "To provide insights into the reasons for low confidence among individuals and offer practical tips and tricks to help individuals build and maintain confidence",
+      "explanation": "The presentation on 'Confidence' aims to provide valuable insights and practical tips to enhance self-confidence.",
+      "id": 1,
+      "options": [
+        "To provide insights into the reasons for low confidence among individuals and offer practical tips and tricks to help individuals build and maintain confidence",
+        "To discuss the importance of community service",
+        "To introduce the concept of personality development",
+        "To provide an overview of the BCA program"
+      ],
+      "question_text": "What is the primary objective of the presentation on 'Confidence'?"
+    },
+    {
+      "correct_answer": "Enlightened Kumud Trust",
+      "explanation": "The students visited the Enlightened Kumud Trust NGO to interact with underprivileged children.",
+      "id": 2,
+      "options": [
+        "Enlightened Kumud Trust",
+        "Vivekananda Institute of Professional Studies",
+        "Vivekananda School of Information Technology",
+        "Barun Wason Foundation"
+      ],
+      "question_text": "What is the name of the NGO visited by the students?"
+    },
+    {
+      "correct_answer": "It reinforces the belief in the importance of empathy, compassion, and supporting those in need",
+      "explanation": "The visit to the NGO reinforced the students' belief in the importance of community service and supporting those in need.",
+      "id": 3,
+      "options": [
+        "It helps to build confidence",
+        "It provides an opportunity to learn new skills",
+        "It reinforces the belief in the importance of empathy, compassion, and supporting those in need",
+        "It is a requirement for the BCA program"
+      ],
+      "question_text": "What is the importance of community service?"
+    },
+    {
+      "correct_answer": "Barun Wason",
+      "explanation": "The assignment was submitted by Barun Wason.",
+      "id": 4,
+      "options": [
+        "Barun Wason",
+        "Dhruv Parashar",
+        "Karthik Nair",
+        "Saurabh Sharma"
+      ],
+      "question_text": "What is the name of the student who submitted the assignment?"
+    },
+    {
+      "correct_answer": "Confidence-Building Skills",
+      "explanation": "The group organized an event on the topic of 'Confidence-Building Skills'.",
+      "id": 5,
+      "options": [
+        "Confidence-Building Skills",
+        "Community Service",
+        "Personality Development",
+        "Leadership Skills"
+      ],
+      "question_text": "What is the topic of the event organized by the group?"
+    },
+    {
+      "correct_answer": "Poster",
+      "explanation": "Barun Wason was responsible for creating the poster for the event.",
+      "id": 6,
+      "options": [
+        "Presentation",
+        "Poster",
+        "Content of presentation",
+        "Feedback form"
+      ],
+      "question_text": "What is the role of Barun Wason in the group?"
+    },
+    {
+      "correct_answer": "Ms. Kanta Malik",
+      "explanation": "Ms. Kanta Malik was the faculty coordinator for the community service event.",
+      "id": 7,
+      "options": [
+        "Ms. Kanta Malik",
+        "Ms. Vivekananda",
+        "Ms. Kumud",
+        "Ms. Barun"
+      ],
+      "question_text": "What is the name of the faculty coordinator for the community service event?"
+    },
+    {
+      "correct_answer": "To interact with underprivileged children and engage them in enjoyable activities",
+      "explanation": "The objective of the community service event was to interact with underprivileged children and engage them in enjoyable activities.",
+      "id": 8,
+      "options": [
+        "To interact with underprivileged children and engage them in enjoyable activities",
+        "To provide support to the NGO",
+        "To learn new skills",
+        "To build confidence"
+      ],
+      "question_text": "What is the objective of the community service event?"
+    },
+    {
+      "correct_answer": "All of the above",
+      "explanation": "The community service event provided valuable insights into the lives of underprivileged children and highlighted the significance of supporting them through interactive activities and programs.",
+      "id": 9,
+      "options": [
+        "The importance of empathy and compassion",
+        "The significance of supporting underprivileged children",
+        "The value of community service",
+        "All of the above"
+      ],
+      "question_text": "What is the learning outcome of the community service event?"
+    },
+    {
+      "correct_answer": "Vivekananda School of Information Technology",
+      "explanation": "The students are pursuing their BCA degree at the Vivekananda School of Information Technology.",
+      "id": 10,
+      "options": [
+        "Vivekananda School of Information Technology",
+        "Vivekananda Institute of Professional Studies",
+        "Enlightened Kumud Trust",
+        "Barun Wason School of Information Technology"
+      ],
+      "question_text": "What is the name of the school where the students are pursuing their BCA degree?"
+    }
+  ],
+  "quiz_title": "Personality Development and Community Service Quiz",
+  "subject": "Personality Development and Community Service"
+>>>>>>> bd56628 (Update quiz questions and add report PDFs)
 }
