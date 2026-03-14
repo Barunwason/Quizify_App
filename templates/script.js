@@ -27,10 +27,49 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-questionContainer.style.display = "none";
+const uploadForm = document.getElementById("uploadForm");
+const uploadResult = document.getElementById("uploadResult");
 
-// Handle form submit
-submit_topic();
+// Handle PDF upload
+uploadForm.addEventListener("submit", async (e) => {
+  e.preventDefault(); // Stop page reload
+
+  const formData = new FormData(uploadForm);
+  if (!formData.get('pdf')) {
+    alert("Please select a PDF file!");
+    return;
+  }
+
+  try {
+    uploadResult.innerText = "Uploading and generating quiz...";
+
+    let response = await fetch("/upload-pdf", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to upload PDF");
+    }
+
+    let result = await response.json();
+    uploadResult.innerText = result.message;
+
+    // Now fetch generated questions.json
+    let quizResponse = await fetch("/static/questions.json");
+    quizData = await quizResponse.json();
+
+    // Hide upload form and show quiz
+    document.getElementById("card2").style.display = "none";
+    document.getElementById("card1").style.display = "none";
+    questionContainer.style.display = "block";
+
+    showQuestion();
+  } catch (error) {
+    console.error("Error:", error);
+    uploadResult.innerText = "Error: " + error.message;
+  }
+});
 function submit_topic() {
   topicInputForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Stop page reload

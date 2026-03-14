@@ -46,8 +46,8 @@
     </h1>
     <p>Boost your learning by testing yourself on your own material.</p>
     <div class="hero-buttons">
-      <button class="btn">Start with a Topic</button>
-      <button class="btn">Upload Notes</button>
+      <button class="btn" id="topic_btn">Start with a Topic</button>
+      <button class="btn" id="pdf_btn">Upload Notes</button>
     </div>
   </section>
 
@@ -55,14 +55,26 @@
   <section class="cards">
     <!-- Enter Topic Card -->
     <div class="card" id="card1">
+       {% if message %}
+  <p style="color: green; font-weight: bold;">
+    {{ message }}
+  </p>
+  {% endif %}
       <form id="topicInput1" method="POST">
-        <h2>Enter a Topic</h2>
-        <input type="text" id="topicInput" name="topic"
-          placeholder="Enter a topic (e.g. Python Basics, World War II)" />
-        <button type="submit" id="generateBtn" class="btn">
-          Create Quiz
-        </button>
-      </form>
+    <h2>Enter a Topic</h2>
+
+    <input type="text" id="topicInput" name="topic"
+      placeholder="Enter a topic (e.g. Python Basics, World War II)" />
+
+    <button type="submit" name="action" value="quiz" class="btn">
+      Generate Quiz
+    </button>
+
+    <button type="submit" name="action" value="question" class="btn">
+      Generate Question
+    </button>
+  </form>
+      <div id="uploadResult1" style="margin-top:8px;"></div>
     </div>
 
     <!-- Upload Notes Card -->
@@ -72,7 +84,7 @@
         <input type="file" name="pdf" accept="application/pdf,.pdf" required />
         <button class="btn" type="submit">Upload PDF and Generate Quiz</button>
       </form>
-      <div id="uploadResult" style="margin-top:8px;"></div>
+      <div id="uploadResult2" style="margin-top:8px;"></div>
     </div>
     <div class="quiz-container" id="question-container">
       <div id="question" class="question">Enter the Topic for Quiz</div>

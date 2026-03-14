@@ -18,7 +18,7 @@
     },
     "questions": {
       "type": "array",
-      "description": "List of quiz questions",
+      "description": "List of quiz questions (mix of MCQ and subjective)",
       "items": {
         "type": "object",
         "properties": {
@@ -26,13 +26,18 @@
             "type": "integer",
             "description": "Unique question ID"
           },
+          "type": {
+            "type": "string",
+            "enum": ["mcq", "subjective"],
+            "description": "Type of question: 'mcq' for multiple choice, 'subjective' for open-ended"
+          },
           "question_text": {
             "type": "string",
             "description": "The quiz question"
           },
           "options": {
             "type": "array",
-            "description": "List of possible answer options",
+            "description": "List of possible answer options (only for MCQ)",
             "items": {
               "type": "string"
             },
@@ -41,14 +46,24 @@
           },
           "correct_answer": {
             "type": "string",
-            "description": "The correct answer (must match one of the options)"
+            "description": "The correct answer (for MCQ: must match one of the options; for subjective: model answer)"
           },
           "explanation": {
             "type": "string",
             "description": "Explanation of the correct answer"
           }
         },
-        "required": ["id", "question_text", "options", "correct_answer"]
+        "required": ["id", "type", "question_text", "correct_answer"],
+        "allOf": [
+          {
+            "if": {
+              "properties": { "type": { "const": "mcq" } }
+            },
+            "then": {
+              "required": ["options"]
+            }
+          }
+        ]
       },
       "minItems": 1
     }

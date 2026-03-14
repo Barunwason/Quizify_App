@@ -17,6 +17,7 @@ def home():
     topic = None
     if request.method == 'POST':
         topic = request.form['topic']
+        
         generate_quiz(topic)   # generate questions.json
     return render_template('home.html', topic=topic)
 
@@ -40,5 +41,5 @@ def upload_pdf():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 if __name__ == "__main__":
-    
     app.run(debug=True)
+

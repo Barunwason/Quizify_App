@@ -7,13 +7,16 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const resultElement = document.getElementById("result");
 const nextButton = document.getElementById("next-btn");
+const topicButton = document.getElementById("topic_btn");
+const pdfButton = document.getElementById("pdf_btn");
 const topicInputForm = document.getElementById("topicInput1");
 const option2Container = document.getElementById("card2");
 const option1Container = document.getElementById("card1");
 const toggleBtn = document.getElementById("theme-switch");
 // Removed unused: const app = document.getElementsByClassName("app");
 const uploadForm = document.getElementById("uploadForm");
-const uploadResult = document.getElementById("uploadResult");
+const uploadResult1 = document.getElementById("uploadResult1");
+const uploadResult2 = document.getElementById("uploadResult2");
 
 // Load saved preference
 if (localStorage.getItem("theme") === "dark") {
@@ -34,18 +37,35 @@ toggleBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   questionContainer.style.display = "none";
 });
+
+topicButton.addEventListener("click", ()=>{
+  if(questionContainer.style.display == "block" && currentQuestionIndex < quizData.questions.length){
+    alert("Please complete the quiz");
+    return;
+  }
+  option2Container.style.display = "none";
+  option1Container.style.display = "block";
+})
+pdfButton.addEventListener("click", ()=>{
+  if(questionContainer.style.display == "block"){
+    alert("Please complete the quiz");
+    return;
+  }
+  option1Container.style.display = "none";
+  option2Container.style.display = "block";
+})
 // Handle form submit
 submit_topic();
 function submit_topic() {
   topicInputForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Stop page reload
-
+    
     const topic = document.getElementById("topicInput").value;
     if (!topic) {
       alert("Please enter a topic!");
       return;
     }
-
+    uploadResult1.textContent = "Generating quiz...";
     try {
       // Send topic to backend
       let response = await fetch("/", {
@@ -81,7 +101,7 @@ if (uploadForm) {
   uploadForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(uploadForm);
-    uploadResult.textContent = "Uploading and generating quiz...";
+    uploadResult2.textContent = "Uploading and generating quiz...";
     try {
       const res = await fetch("/upload-pdf", { method: "POST", body: formData });
       if (!res.ok) throw new Error("Upload failed");
@@ -98,10 +118,10 @@ if (uploadForm) {
       currentQuestionIndex = 0;
       score = 0;
       showQuestion();
-      uploadResult.textContent = "Quiz generated from PDF.";
+      uploadResult2.textContent = "Quiz generated from PDF.";
     } catch (err) {
       console.error(err);
-      uploadResult.textContent = "Error: " + err.message;
+      uploadResult2.textContent = "Error: " + err.message;
     }
   });
 }
