@@ -1,127 +1,127 @@
 {
-  "difficulty": "hard",
+  "difficulty": "medium",
   "questions": [
     {
-      "correct_answer": "To enable the model to attend to different parts of the input sequence",
-      "explanation": "The self-attention mechanism allows the model to attend to different parts of the input sequence simultaneously and weigh their importance, enabling it to capture long-range dependencies and contextual relationships.",
+      "correct_answer": "Question Generation",
+      "explanation": "LangChain is used for AI-based quiz generation, which involves question generation.",
       "id": 1,
       "options": [
-        "To perform convolutional operations",
-        "To facilitate recurrent neural network-like behavior",
-        "To enable the model to attend to different parts of the input sequence",
-        "To apply a fixed set of filters to the input data"
+        "Text Extraction",
+        "Question Generation",
+        "PDF Parsing",
+        "AI Model Training"
       ],
-      "question_text": "What is the primary function of the self-attention mechanism in transformer models?"
+      "question_text": "What is the primary function of the LangChain library used in the Quizify AI project?"
     },
     {
-      "correct_answer": "To preserve the order of the input sequence",
-      "explanation": "The positional encoding adds a fixed vector to the input embeddings at each position, allowing the model to preserve the order of the input sequence and capture positional information.",
+      "correct_answer": "Cloud Computing",
+      "explanation": "Cloud Computing is not mentioned in the technical skills section.",
       "id": 2,
       "options": [
-        "To add a fixed set of filters to the input data",
-        "To enable the model to attend to different parts of the input sequence",
-        "To preserve the order of the input sequence",
-        "To perform convolutional operations"
+        "Cloud Computing",
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "Computer Networks"
       ],
-      "question_text": "What is the purpose of the positional encoding in transformer models?"
+      "question_text": "Which of the following is NOT a technical skill of Barun Wason?"
     },
     {
-      "correct_answer": "The encoder performs self-attention, while the decoder performs cross-attention",
-      "explanation": "The transformer encoder performs self-attention over the input sequence, while the decoder performs cross-attention over the output sequence and self-attention over the previously generated output.",
+      "correct_answer": "Quizify AI",
+      "explanation": "Quizify AI is the AI-powered quiz generation web app mentioned in the projects section.",
       "id": 3,
       "options": [
-        "The encoder performs self-attention, while the decoder performs cross-attention",
-        "The encoder is used for sequence-to-sequence tasks, while the decoder is used for sequence classification tasks",
-        "The encoder is used for sequence classification tasks, while the decoder is used for sequence-to-sequence tasks",
-        "The encoder and decoder are interchangeable and can be used for any task"
+        "Quizify AI",
+        "Customer Support Chatbot",
+        "Spam-Ham Classification",
+        "Customer Churn Prediction"
       ],
-      "question_text": "What is the difference between a transformer encoder and a transformer decoder?"
+      "question_text": "What is the name of the AI-powered quiz generation web app developed by Barun Wason?"
     },
     {
-      "correct_answer": "To increase the capacity of the model by allowing it to jointly attend to information from different representation subspaces",
-      "explanation": "The multi-head attention mechanism allows the model to jointly attend to information from different representation subspaces, increasing its capacity to capture complex relationships and contextual information.",
+      "correct_answer": "Random Forest",
+      "explanation": "Random Forest is used with Word2Vec embeddings for email classification.",
       "id": 4,
       "options": [
-        "To perform convolutional operations",
-        "To enable the model to attend to different parts of the input sequence",
-        "To increase the capacity of the model by allowing it to jointly attend to information from different representation subspaces",
-        "To apply a fixed set of filters to the input data"
+        "Random Forest",
+        "Support Vector Machine",
+        "K-Nearest Neighbors",
+        "Gradient Boosting"
       ],
-      "question_text": "What is the purpose of the multi-head attention mechanism in transformer models?"
+      "question_text": "Which machine learning algorithm is used for email classification in the Spam-Ham Classification project?"
     },
     {
-      "correct_answer": "They can capture long-range dependencies and contextual relationships more effectively than recurrent neural networks",
-      "explanation": "Transformer models can capture long-range dependencies and contextual relationships more effectively than recurrent neural networks, making them particularly well-suited for natural language processing tasks.",
+      "correct_answer": "CrewAI",
+      "explanation": "CrewAI is used for building the multi-agent AI support system.",
       "id": 5,
       "options": [
-        "They can be parallelized more easily than recurrent neural networks",
-        "They can capture long-range dependencies and contextual relationships more effectively than recurrent neural networks",
-        "They are more interpretable than recurrent neural networks",
-        "They require less training data than recurrent neural networks"
+        "CrewAI",
+        "LangChain",
+        "scikit-learn",
+        "TensorFlow"
       ],
-      "question_text": "What is the advantage of using transformer models for natural language processing tasks?"
+      "question_text": "What is the name of the library used for building the multi-agent AI support system in the Customer Support Chatbot project?"
     },
     {
-      "correct_answer": "To stabilize the training process and prevent vanishing or exploding gradients",
-      "explanation": "The pre-norm and post-norm layers help to stabilize the training process and prevent vanishing or exploding gradients by normalizing the input data and the output of the self-attention and feed-forward layers.",
+      "correct_answer": "Data Structures and Algorithms — NPTEL",
+      "explanation": "Data Structures and Algorithms — NPTEL is the certification mentioned in the certifications section.",
       "id": 6,
       "options": [
-        "To perform convolutional operations",
-        "To enable the model to attend to different parts of the input sequence",
-        "To normalize the input data",
-        "To stabilize the training process and prevent vanishing or exploding gradients"
+        "Data Structures and Algorithms — NPTEL",
+        "Machine Learning — Stanford University",
+        "Deep Learning — MIT",
+        "Artificial Intelligence — Harvard University"
       ],
-      "question_text": "What is the purpose of the pre-norm and post-norm layers in transformer models?"
+      "question_text": "Which of the following is a certification held by Barun Wason?"
     },
     {
-      "correct_answer": "A transformer is a type of neural network that uses self-attention mechanisms to process sequences in parallel",
-      "explanation": "A transformer is a type of neural network that uses self-attention mechanisms to process sequences in parallel, whereas a recurrent neural network processes sequences sequentially using recurrent connections.",
+      "correct_answer": "Indraprastha University — USICT",
+      "explanation": "Indraprastha University — USICT is the university where Barun Wason is currently pursuing his Master of Computer Applications.",
       "id": 7,
       "options": [
-        "A transformer is a type of recurrent neural network",
-        "A transformer is a type of convolutional neural network",
-        "A transformer is a type of neural network that uses self-attention mechanisms to process sequences in parallel",
-        "A transformer is a type of neural network that uses convolutional operations to process sequences"
+        "Indraprastha University — USICT",
+        "Indraprastha University — VIPS",
+        "Delhi University",
+        "Jawaharlal Nehru University"
       ],
-      "question_text": "What is the difference between a transformer and a recurrent neural network?"
+      "question_text": "What is the name of the university where Barun Wason is currently pursuing his Master of Computer Applications?"
     },
     {
-      "correct_answer": "To transform the output of the self-attention mechanism into a higher-dimensional space",
-      "explanation": "The feed-forward network transforms the output of the self-attention mechanism into a higher-dimensional space, allowing the model to capture more complex relationships and contextual information.",
+      "correct_answer": "Customer Churn Prediction using ANN",
+      "explanation": "Customer Churn Prediction using ANN uses TensorFlow for building an ANN model.",
       "id": 8,
       "options": [
-        "To perform convolutional operations",
-        "To enable the model to attend to different parts of the input sequence",
-        "To transform the output of the self-attention mechanism into a higher-dimensional space",
-        "To apply a fixed set of filters to the input data"
+        "Customer Churn Prediction using ANN",
+        "Spam-Ham Classification",
+        "Customer Support Chatbot",
+        "Algerian Forest Fire Prediction"
       ],
-      "question_text": "What is the purpose of the feed-forward network in transformer models?"
+      "question_text": "Which of the following projects uses TensorFlow for building an Artificial Neural Network (ANN) model?"
     },
     {
-      "correct_answer": "It can adapt the learning rate for each parameter individually",
-      "explanation": "The Adam optimizer can adapt the learning rate for each parameter individually, which helps to stabilize the training process and prevent vanishing or exploding gradients.",
+      "correct_answer": "Flask",
+      "explanation": "Flask is used for building the backend APIs in the Quizify AI project.",
       "id": 9,
       "options": [
-        "It can handle large batch sizes",
-        "It can stabilize the training process and prevent vanishing or exploding gradients",
-        "It can adapt the learning rate for each parameter individually",
-        "It can capture long-range dependencies and contextual relationships more effectively"
+        "Flask",
+        "Django",
+        "Pyramid",
+        "FastAPI"
       ],
-      "question_text": "What is the advantage of using the Adam optimizer with transformer models?"
+      "question_text": "What is the name of the web framework used for building the backend APIs in the Quizify AI project?"
     },
     {
-      "correct_answer": "To decrease the learning rate during training",
-      "explanation": "The learning rate scheduler decreases the learning rate during training, which helps to prevent overfitting and improve the convergence of the model.",
+      "correct_answer": "All of the above",
+      "explanation": "Git, GitHub, and Postman are all mentioned as tools used by Barun Wason.",
       "id": 10,
       "options": [
-        "To increase the learning rate during training",
-        "To decrease the learning rate during training",
-        "To stabilize the training process and prevent vanishing or exploding gradients",
-        "To capture long-range dependencies and contextual relationships more effectively"
+        "Git",
+        "GitHub",
+        "Postman",
+        "All of the above"
       ],
-      "question_text": "What is the purpose of the learning rate scheduler in transformer models?"
+      "question_text": "Which of the following is a tool used by Barun Wason?"
     }
   ],
-  "quiz_title": "Transformer LLM Quiz",
-  "subject": "Artificial Intelligence"
+  "quiz_title": "AI/ML and Software Engineering Quiz",
+  "subject": "AI/ML and Software Engineering"
 }
